@@ -1,0 +1,1 @@
+docker run --rm --name my-apache-app -p 8080:80 -v  c:\OpenDAoC-Launcher\webserver:/usr/local/apache2/htdocs/ httpd:2.4
