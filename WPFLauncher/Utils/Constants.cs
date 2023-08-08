@@ -2,18 +2,18 @@
 {
     internal class Constants
     {
-        public const string LauncherVersion = "1.0.7";
+        public const string LauncherVersion = "1.0.0";
 
         #region Patcher
 
-        public const string LauncherUpdaterName = "AtlasLauncher_Update.exe";
+        public const string LauncherUpdaterName = "AriadolisReloadedLauncher_Update.exe";
         public const string AppData = @"%AppData%\";
-        public const string UserPath = "\\Electronic Arts\\Dark Age of Camelot\\Atlas\\user.dat";
+        public const string UserPath = "\\Electronic Arts\\Dark Age of Camelot\\AriadolisReloaded\\user.dat";
         
         public const string
-            RemoteVersionUrl = "https://patch.atlasfreeshard.com/version-new.txt";
+            RemoteVersionUrl = "http://localhost:8080/version-new.txt";
         public const string
-            RemoteFileList = "https://patch.atlasfreeshard.com/patchlist-new.txt"; 
+            RemoteFileList = "http://localhost:8080/patchlist-new.txt"; 
         
         public static string RemoteFilePath;
 
@@ -21,7 +21,7 @@
 
         #region gameserver
 
-        public const string LiveIP = "play.atlasfreeshard.com";
+        public const string LiveIP = "34.95.24.250";
         public const string PtrIP = "ptr.atlasfreeshard.com";
         public const string QueueApiIP = "https://queue.atlasfreeshard.com";
 
@@ -31,7 +31,7 @@
 
         public const string RegisterUrl = "https://atlasl.ink/register";
         public const string LinkUrl = "https://atlasl.ink/link-discord";
-        public const string PatchNotesUrl = "https://atlasl.ink/patch-notes";
+        public const string PatchNotesUrl = "https://discord.com/channels/1128756393139261523/1128777773155098654";
         
         #endregion
         

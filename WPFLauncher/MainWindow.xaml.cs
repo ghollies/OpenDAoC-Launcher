@@ -378,8 +378,11 @@ namespace WPFLauncher
                 EnableAccountCredentials(true);
                 return;
             };
+            PlayButton.Content = "Joining...";
+            EnableAccountCredentials(true);
+            Play();
 
-            var data = new Dictionary<string, string>()
+            /*var data = new Dictionary<string, string>()
             {
                 { "name", UsernameBox.Text },
                 { "password", PasswordBox.Password }
@@ -420,7 +423,7 @@ namespace WPFLauncher
                 PlayButton.Content = "Joining...";
                 EnableAccountCredentials(true);
                 Play();
-            }
+            }*/
             return;
         }
 
