@@ -81,7 +81,7 @@ namespace WPFLauncher
             log.Information("Initializing settings");
 
             ShowInTaskbar = true;
-            LauncherWindow.Title = "Atlas Launcher v" + Constants.LauncherVersion;
+            LauncherWindow.Title = "AriadolisReloaded Launcher v" + Constants.LauncherVersion;
             if (Settings.Default.Username != "") UsernameBox.Text = Settings.Default.Username;
             if (Settings.Default.Password != "") PasswordBox.Password = Settings.Default.Password;
             if (Settings.Default.QuickCharacter != "") QuickloginCombo.Text = Settings.Default.QuickCharacter;
@@ -92,7 +92,7 @@ namespace WPFLauncher
 
         private void InitializeLogger()
         {
-            log = new LoggerConfiguration().WriteTo.File("logs/AtlasLauncher-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+            log = new LoggerConfiguration().WriteTo.File("logs/AriadolisReloadedLauncher-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
         }
 
         private async Task CheckVersion()
@@ -244,7 +244,7 @@ namespace WPFLauncher
                     try
                     {
                         var data = await _httpClient.GetByteArrayAsync(Constants.RemoteFilePath + file.FileName);
-                        if (file.FileName.Contains("AtlasLauncher")) updateSelf = true;
+                        if (file.FileName.Contains("AriadolisReloadedLauncher")) updateSelf = true;
                         new FileInfo(file.FileName).Directory?.Create();
                         File.WriteAllBytes(file.FileName, data);
 
@@ -341,17 +341,17 @@ namespace WPFLauncher
         {
             var self = Assembly.GetExecutingAssembly().Location;
 
-            using (var batFile = new StreamWriter(File.Create("AtlasLauncherUpdate.bat")))
+            using (var batFile = new StreamWriter(File.Create("AriadolisReloadedLauncherUpdate.bat")))
             {
                 batFile.WriteLine("@ECHO OFF");
                 batFile.WriteLine("TIMEOUT /t 1 /nobreak > NUL");
-                batFile.WriteLine("TASKKILL /IM \"{0}\" > NUL", "AtlasLauncher.exe");
-                batFile.WriteLine("MOVE \"{0}\" \"{1}\"", Constants.LauncherUpdaterName, "AtlasLauncher.exe");
+                batFile.WriteLine("TASKKILL /IM \"{0}\" > NUL", "AriadolisReloadedLauncher.exe");
+                batFile.WriteLine("MOVE \"{0}\" \"{1}\"", Constants.LauncherUpdaterName, "AriadolisReloadedLauncher.exe");
                 batFile.WriteLine("DEL \"{0}\"", Constants.LauncherUpdaterName);
                 batFile.WriteLine("DEL \"%~f0\" & START \"\" /B \"{0}\"", self);
             }
 
-            var startInfo = new ProcessStartInfo("AtlasLauncherUpdate.bat");
+            var startInfo = new ProcessStartInfo("AriadolisReloadedLauncherUpdate.bat");
             startInfo.CreateNoWindow = true;
             startInfo.UseShellExecute = false;
             Process.Start(startInfo);
@@ -558,21 +558,21 @@ namespace WPFLauncher
 
             serverIP = Settings.Default.PTR ? Constants.PtrIP : Constants.LiveIP;
 
-            var command = "connect.exe game1127.dll " + serverIP + " " + UsernameBox.Text + " " + PasswordBox.Password +
+            var command = "connect.exe game.dll " + serverIP + " " + UsernameBox.Text + " " + PasswordBox.Password +
                           " " + quickSelection;
-            StartAtlas(command);
+            StartAriadolisReloaded(command);
             PlayButton.Content = "Play";
             EnableAccountCredentials(true);
         }
 
-        private static void StartAtlas(string command)
+        private static void StartAriadolisReloaded(string command)
         {
             ProcessStartInfo ProcessInfo;
-            Process AtlasProcess;
+            Process AriadolisReloadedProcess;
             ProcessInfo = new ProcessStartInfo("cmd.exe", "/K " + command);
             ProcessInfo.WindowStyle = ProcessWindowStyle.Hidden;
             ProcessInfo.UseShellExecute = true;
-            AtlasProcess = Process.Start(ProcessInfo);
+            AriadolisReloadedProcess = Process.Start(ProcessInfo);
 
             if (!Settings.Default.KeepOpen) Environment.Exit(0);
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AtlasPatcher.Lister
+namespace AriadolisReloadedPatcher.Lister
 {
     static class Program
     {

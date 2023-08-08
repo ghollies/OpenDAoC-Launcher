@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 using Cyclic.Redundancy.Check;
 
-namespace AtlasPatcher.Lister
+namespace AriadolisReloadedPatcher.Lister
 {
     public partial class lForm : Form
     {

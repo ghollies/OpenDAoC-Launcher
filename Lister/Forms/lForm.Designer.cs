@@ -1,4 +1,4 @@
-﻿namespace AtlasPatcher.Lister
+﻿namespace AriadolisReloadedPatcher.Lister
 {
     partial class lForm
     {
