@@ -15,7 +15,7 @@ namespace WPFLauncher
 
         private void LoadSavedOptions()
         {
-            PTRButton.IsChecked = Settings.Default.PTR;
+            //PTRButton.IsChecked = Settings.Default.PTR;
             KeepOpenButton.IsChecked = Settings.Default.KeepOpen;
             TrayButton.IsChecked = Settings.Default.MinimizeToTray;
             SaveAccountButton.IsChecked = Settings.Default.SaveAccount;
@@ -23,7 +23,7 @@ namespace WPFLauncher
 
         private void OptionSaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (PTRButton.IsChecked.HasValue) Settings.Default.PTR = PTRButton.IsChecked.Value;
+            //if (PTRButton.IsChecked.HasValue) Settings.Default.PTR = PTRButton.IsChecked.Value;
             if (KeepOpenButton.IsChecked.HasValue) Settings.Default.KeepOpen = KeepOpenButton.IsChecked.Value;
             if (SaveAccountButton.IsChecked.HasValue) Settings.Default.SaveAccount = SaveAccountButton.IsChecked.Value;
             if (TrayButton.IsChecked.HasValue) Settings.Default.MinimizeToTray = TrayButton.IsChecked.Value;

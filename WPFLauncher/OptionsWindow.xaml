@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
-        Title="AriadolisReloaded Launcher Options" Height="240" Width="320" ResizeMode="NoResize" Icon="/img/icon.ico">
+        Title="AriadolisReloaded Launcher Options" Height="240" Width="320" ResizeMode="NoResize" Icon="/img/ar-icon.ico">
     <Window.Resources>
         <ControlTemplate x:Key="OnOffButtonTemplate" TargetType="ToggleButton">
             <Grid
@@ -69,10 +69,10 @@
                    Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" />
         <ToggleButton x:Name="TrayButton" Grid.Row="3" Grid.Column="2" Style="{StaticResource OnOffButtonStyle}"
                       BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" />
-        <TextBlock x:Name="PTRText" Grid.Row="4" Grid.Column="1" Text="Connect to PTR" TextBlock.FontWeight="Bold"
+        <!--<TextBlock x:Name="PTRText" Grid.Row="4" Grid.Column="1" Text="Connect to PTR" TextBlock.FontWeight="Bold"
                    Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" />
-        <ToggleButton x:Name="PTRButton" Grid.Row="4" Grid.Column="2" Style="{StaticResource OnOffButtonStyle}"
-                      BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" />
+       <ToggleButton x:Name="PTRButton" Grid.Row="4" Grid.Column="2" Style="{StaticResource OnOffButtonStyle}"
+                      BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" />-->
 
 
         <Button x:Name="OptionSaveButton" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Content="Save"

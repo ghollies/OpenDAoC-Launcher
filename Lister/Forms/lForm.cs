@@ -11,7 +11,7 @@ namespace AriadolisReloadedPatcher.Lister
     {
         string[] Files;
 
-        private string PatchFilesURL = "https://patch.atlasfreeshard.com/atlaspack/";
+        private string PatchFilesURL = "https://ariadolis.com/patcher/";
 
         public lForm()
         {

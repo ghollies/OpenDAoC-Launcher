@@ -43,8 +43,9 @@ namespace WPFLauncher
 
         public async Task<bool> CheckForNewVersionAsync()
         {
-            var version = await GetVersionAsync();
             var currentVersion = Settings.Default.localVersion;
+            var version = await GetVersionAsync();
+
             return version > currentVersion;
         }
 

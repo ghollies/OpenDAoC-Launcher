@@ -151,6 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Resource Include="img\ar-icon.ico" />
+    <Resource Include="img\ar-logo.png" />
     <EmbeddedResource Include="WPFLauncher.manifest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

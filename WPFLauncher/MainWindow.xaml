@@ -6,7 +6,7 @@
         xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         Title="Ariadolis Reloaded Launcher (OpenDAoC)" Height="300" Width="500" ResizeMode="CanMinimize" WindowStyle="SingleBorderWindow"
-        HorizontalAlignment="Stretch" Icon="/img/icon.ico">
+        HorizontalAlignment="Stretch" Icon="/img/ar-icon.ico">
 
 
     <Grid MouseDown="GridBread_MouseDown" Margin="-1,0,0,-12">
@@ -39,9 +39,9 @@
         <Button x:Name="OptionsButton" Grid.Column="7" Content="OPTIONS" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="90,0,0,0" Height="20" Width="80" Background="{x:Null}"
                 Foreground="LightGray" BorderBrush="Gray" TextBlock.FontSize="10" Click="OptionsButton_Click" />
-        <Button x:Name="RegisterButton" Grid.Column="7" Content="REGISTER" HorizontalAlignment="Left"
+        <!--<Button x:Name="RegisterButton" Grid.Column="7" Content="REGISTER" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Padding="1" Height="20" Width="80" Background="{x:Null}"
-                Foreground="LightGreen" BorderBrush="LightGreen" TextBlock.FontSize="10" Click="RegisterButton_Click" />
+                Foreground="LightGreen" BorderBrush="LightGreen" TextBlock.FontSize="10" Click="RegisterButton_Click" />-->
         <Button x:Name="PatchButton" Grid.Column="6" Content="PATCH NOTES" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Padding="1" Margin="5,0,0,0" Height="20" Width="80" Background="{x:Null}"
                 Foreground="LightGray" BorderBrush="Gray" TextBlock.FontSize="10" Click="PatchButton_PreviewMouseDown" />
@@ -65,8 +65,9 @@
             </ComboBox.ItemContainerStyle>
         </ComboBox>
         <Label x:Name="QuickloginLabel" Grid.Column="6" Grid.Row="3" Content="Character" Foreground="White" TextBlock.FontSize="12" TextBlock.FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="62" Height="24" Grid.ColumnSpan="2" Margin="0,0,183,0" />
-        <Image x:Name="AlbIcon" Grid.Row="6" Grid.Column="1" Source="/img/alb.png"
-               Stretch="Uniform" Grid.ColumnSpan="3"/>
+        <Image x:Name="AlbIcon" Grid.Row="0" Grid.Column="0" Source="/img/ar-logo.png"
+               Stretch="Uniform" Grid.ColumnSpan="6" Grid.RowSpan="7"/>
+        <!--
         <Label x:Name="AlbLabel" Grid.Row="7" Grid.Column="1" Width="40"
                HorizontalContentAlignment="Center" Content="N/A" Foreground="Red"
                HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="12" TextBlock.FontWeight="Bold" Height="24" Margin="17,0,0,0" Grid.ColumnSpan="2" />
@@ -80,6 +81,7 @@
         <Label x:Name="HibLabel" Grid.Row="7" Grid.Column="5" Width="40"
                HorizontalContentAlignment="Center" Content="N/A" Foreground="LimeGreen"
                HorizontalAlignment="Center" VerticalAlignment="Top" TextBlock.FontSize="12" TextBlock.FontWeight="Bold" Height="24" />
+        -->
         <Button x:Name="PlayButton" Grid.Column="7" Grid.Row="6" Content="Play" HorizontalAlignment="Center" VerticalAlignment="Top"
                 TextBlock.FontSize="18" TextBlock.FontWeight="bold"
                 Width="140" Click="PlayButton_Click" ClickMode="Release"
@@ -102,7 +104,7 @@
             </Button.Background>
         </Button>
         <tb:TaskbarIcon
-            IconSource="/img/icon.ico"
+            IconSource="/img/ar-icon.ico"
             ToolTipText="AriadolisReloaded Launcher"
             TrayLeftMouseDown="TaskbarIcon_OnTrayLeftMouseDown" Grid.ColumnSpan="2" Margin="4,8,31,25" />
 

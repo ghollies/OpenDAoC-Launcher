@@ -11,9 +11,9 @@
         public const string UserPath = "\\Electronic Arts\\Dark Age of Camelot\\AriadolisReloaded\\user.dat";
         
         public const string
-            RemoteVersionUrl = "http://localhost:8080/version-new.txt";
+            RemoteVersionUrl = "https://ariadolis/patcher/version-new.txt";
         public const string
-            RemoteFileList = "http://localhost:8080/patchlist-new.txt"; 
+            RemoteFileList = "https://ariadolis/patcher/patchlist-new.txt";
         
         public static string RemoteFilePath;
 
@@ -29,8 +29,8 @@
 
         #region Player Urls
 
-        public const string RegisterUrl = "https://atlasl.ink/register";
-        public const string LinkUrl = "https://atlasl.ink/link-discord";
+        public const string RegisterUrl = "https://ariadolis/register";
+        public const string LinkUrl = "https://ariadolis/link-discord";
         public const string PatchNotesUrl = "https://discord.com/channels/1128756393139261523/1128777773155098654";
         
         #endregion

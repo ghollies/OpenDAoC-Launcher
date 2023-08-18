@@ -99,8 +99,8 @@ namespace WPFLauncher
         {
             if (!updating)
             {
-                _updateAvailable = await updater.CheckForNewVersionAsync();
-                PlayButton.Content = _updateAvailable ? "Update" : "Play";
+                /*_updateAvailable = await updater.CheckForNewVersionAsync();
+                PlayButton.Content = _updateAvailable ? "Update" : "Play";*/
             }
         }
 
@@ -146,7 +146,7 @@ namespace WPFLauncher
             
             using (var httpClient = new HttpClient())
             {
-                var response = await httpClient.GetAsync($"https://api.atlasfreeshard.com/utils/discordstatus/{accountName}");
+                var response = await httpClient.GetAsync($"https://ariadolis.com/api/utils/discordstatus/{accountName}");
 
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
@@ -161,7 +161,7 @@ namespace WPFLauncher
         {
             try
             {
-                var webRequest = WebRequest.Create("https://api.atlasfreeshard.com/utils/discordrequired") as HttpWebRequest;
+                var webRequest = WebRequest.Create("https://ariadolis.com/api/utils/discordrequired") as HttpWebRequest;
 
                 webRequest.ContentType = "application/json";
                 webRequest.UserAgent = "Nothing";
@@ -204,7 +204,7 @@ namespace WPFLauncher
 
         private async void RefreshCount(object sender, EventArgs e)
         {
-            GetPlayerCount();
+            // GetPlayerCount();
             await CheckVersion();
         }
 
@@ -622,46 +622,46 @@ namespace WPFLauncher
             QuickloginCombo.ItemsSource = quickCharacters.Distinct();
         }
 
-        private void GetPlayerCount()
-        {
-            try
-            {
-                var webRequest = WebRequest.Create("https://api.atlasfreeshard.com/stats") as HttpWebRequest;
+        /* private void GetPlayerCount()
+         {
+             try
+             {
+                 var webRequest = WebRequest.Create("https://ariadolis.com/api/stats") as HttpWebRequest;
 
-                if (webRequest == null) return;
-                webRequest.ContentType = "application/json";
-                webRequest.UserAgent = "Nothing";
+                 if (webRequest == null) return;
+                 webRequest.ContentType = "application/json";
+                 webRequest.UserAgent = "Nothing";
 
-                var response = webRequest.GetResponse();
+                 var response = webRequest.GetResponse();
 
-                using (var s = response.GetResponseStream())
-                {
-                    using (var sr = new StreamReader(s))
-                    {
-                        var jsonStats = sr.ReadToEnd();
-                        var stats = JsonConvert.DeserializeObject<Stats>(jsonStats);
-                        if (stats != null && stats.Albion < 10)
-                            AlbLabel.Content = "0" + stats.Albion;
-                        else
-                            AlbLabel.Content = stats?.Albion.ToString();
-                        if (stats != null && stats.Midgard < 10)
-                            MidLabel.Content = "0" + stats.Midgard;
-                        else
-                            MidLabel.Content = stats?.Midgard.ToString();
-                        if (stats != null && stats.Hibernia < 10)
-                            HibLabel.Content = "0" + stats.Hibernia;
-                        else
-                            HibLabel.Content = stats?.Hibernia.ToString();
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                AlbLabel.Content = "N/A";
-                MidLabel.Content = "N/A";
-                HibLabel.Content = "N/A";
-            }
-        }
+                 using (var s = response.GetResponseStream())
+                 {
+                     using (var sr = new StreamReader(s))
+                     {
+                         var jsonStats = sr.ReadToEnd();
+                         var stats = JsonConvert.DeserializeObject<Stats>(jsonStats);
+                         if (stats != null && stats.Albion < 10)
+                             AlbLabel.Content = "0" + stats.Albion;
+                         else
+                             AlbLabel.Content = stats?.Albion.ToString();
+                         if (stats != null && stats.Midgard < 10)
+                             MidLabel.Content = "0" + stats.Midgard;
+                         else
+                             MidLabel.Content = stats?.Midgard.ToString();
+                         if (stats != null && stats.Hibernia < 10)
+                             HibLabel.Content = "0" + stats.Hibernia;
+                         else
+                             HibLabel.Content = stats?.Hibernia.ToString();
+                     }
+                 }
+             }
+             catch (Exception)
+             {
+                 AlbLabel.Content = "N/A";
+                 MidLabel.Content = "N/A";
+                 HibLabel.Content = "N/A";
+             }
+         }*/
 
         private void OptionsButton_Click(object sender, RoutedEventArgs e)
         {
